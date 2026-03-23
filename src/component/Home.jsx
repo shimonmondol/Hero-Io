@@ -1,9 +1,10 @@
-import React from "react";
 import GooglePlay from "../assets/GooglePlay.png";
 import AppStore from "../assets/AppStore.png";
 import Hero from "../assets/hero.png";
+import { useNavigate } from "react-router";
 
-const Banner = () => {
+const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#F5F5F5]">
       <div>
@@ -55,9 +56,15 @@ const Banner = () => {
             </div>
           </div>
         </div>
+        <div className="text-center">
+          <h1>Treanding Apps</h1>
+          <button onClick={() => navigate("/apps")} className="btn btn-primary">
+            Primary
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Banner;
+export default Home;

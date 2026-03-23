@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../assets/logo.png";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -51,7 +50,6 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-
               {/* Resources */}
               <div>
                 <h3 className="font-semibold text-xl mb-4">Resources</h3>
@@ -109,7 +107,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
           <div className="max-w-7xl mx-auto mt-12 pt-4 border-t border-neutral-700 flex justify-between items-center">
             <p className="text-neutral-400 text-sm">© 2026 Hero Io</p>
             <p className="text-sm text-neutral-400">All Right Reserved</p>

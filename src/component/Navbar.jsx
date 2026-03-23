@@ -1,8 +1,10 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import Logo from "../assets/logo.png";
+import { NavLink, useNavigate } from "react-router";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div class="max-w-6xl mx-auto navbar bg-base-100">
@@ -26,37 +28,85 @@ const Navbar = () => {
               </svg>
             </div>
             <ul
-              tabindex="-1"
-              class="menu-sm dropdown-content cursor-pointer bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              tabIndex={-1}
+              className="dropdown-content cursor-pointer bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow"
             >
-              <li className="hover:text-purple-600">
-                <a>Home</a>
-              </li>
-              <li className="hover:text-purple-600">
-                <a>Apps</a>
-              </li>
-              <li className="hover:text-purple-600">
-                <a>Installation</a>
-              </li>
+              <div className="flex flex-col gap-2">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-700 font-bold"
+                      : "hover:text-purple-600"
+                  }
+                >
+                  Home
+                </NavLink>
+
+                <NavLink
+                  to="/apps"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-700 font-bold"
+                      : "hover:text-purple-600"
+                  }
+                >
+                  Apps
+                </NavLink>
+
+                <NavLink
+                  to="/installation"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-700 font-bold"
+                      : "hover:text-purple-600"
+                  }
+                >
+                  Installation
+                </NavLink>
+              </div>
             </ul>
           </div>
-
-          <a class="btn btn-ghost text-md text-purple-700">
+          <button
+            onClick={() => navigate("/")}
+            className="btn btn-ghost text-md text-purple-700"
+          >
             <img className="w-8" src={Logo} alt="" />
             HERO.IO
-          </a>
+          </button>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu-horizontal px-1 cursor-pointer gap-6">
-            <li className="hover:text-purple-600">
-              <a>Home</a>
-            </li>
-            <li className="hover:text-purple-600">
-              <a>Apps</a>
-            </li>
-            <li className="hover:text-purple-600">
-              <a>Installation</a>
-            </li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-purple-700 underline font-bold"
+                  : "hover:text-purple-600"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/apps"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-purple-700 underline font-bold"
+                  : "hover:text-purple-600"
+              }
+            >
+              Apps
+            </NavLink>
+            <NavLink
+              to="/installation"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-purple-700 underline font-bold"
+                  : "hover:text-purple-600"
+              }
+            >
+              Installation
+            </NavLink>
           </ul>
         </div>
         <div class="navbar-end">
