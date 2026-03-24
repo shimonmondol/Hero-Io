@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import Logo from "../assets/logo.png";
-import { NavLink, useNavigate } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -42,7 +42,6 @@ const Navbar = () => {
                 >
                   Home
                 </NavLink>
-
                 <NavLink
                   to="/apps"
                   className={({ isActive }) =>
@@ -53,7 +52,6 @@ const Navbar = () => {
                 >
                   Apps
                 </NavLink>
-
                 <NavLink
                   to="/installation"
                   className={({ isActive }) =>
@@ -69,10 +67,10 @@ const Navbar = () => {
           </div>
           <button
             onClick={() => navigate("/")}
-            className="btn btn-ghost text-md text-purple-700"
+            className="flex text-md text-purple-700 pl-3 cursor-pointer"
           >
             <img className="w-8" src={Logo} alt="" />
-            HERO.IO
+            <h1 className="pl-2 mt-1 font-semibold text-xl">HERO.IO</h1> 
           </button>
         </div>
         <div class="navbar-center hidden lg:flex">
@@ -110,7 +108,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn bg-purple-700 text-white">
+          <a
+            href="https://github.com/shimonmondol"
+            target="_blank"
+            className="btn bg-purple-700 text-white"
+          >
             <FaGithub />
             Contribute
           </a>
