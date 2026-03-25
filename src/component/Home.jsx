@@ -3,7 +3,7 @@ import AppStore from "../assets/AppStore.png";
 import Hero from "../assets/hero.png";
 import download from "../assets/icon-downloads.png";
 import rating from "../assets/icon-ratings.png";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 
 const Home = () => {
@@ -75,33 +75,40 @@ const Home = () => {
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-10">
           {firstEightApps.map((item) => (
-            <div
+            <Link
               key={item.id}
-              className="bg-white p-4 border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition w-full"
+              to={`/apps/${item.id}`}
+              state={{ item }} // <-- pass the full item
+              className="w-full"
             >
-              <img
-                className="rounded-xl w-full h-40 md:h-48 object-cover"
-                src={item.image}
-                alt={item.title}
-              />
-              <h5 className="mt-4 mb-2 text-base md:text-lg font-semibold">
-                {item.title}
-              </h5>
-              <div className="flex justify-between">
-                <div className="flex items-center border border-white bg-[#F1F5E8] px-2 py-1 rounded">
-                  <img className="w-4 h-4" src={download} alt="" />
-                  <h1 className="font-semibold text-sm ml-1 text-[#00D390]">
-                    {item.downloads}
-                  </h1>
-                </div>
-                <div className="flex items-center border border-white bg-[#F1F5E8] px-2 py-1 rounded">
-                  <img className="w-4 h-4" src={rating} alt="" />
-                  <h1 className="font-semibold text-sm ml-1 text-[#FF8811]">
-                    {item.ratingAvg}
-                  </h1>
+              <div
+                key={item.id}
+                className="bg-white p-4 border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition w-full"
+              >
+                <img
+                  className="rounded-xl w-full h-40 md:h-48 object-cover"
+                  src={item.image}
+                  alt={item.title}
+                />
+                <h5 className="mt-4 mb-2 text-base md:text-lg font-semibold">
+                  {item.title}
+                </h5>
+                <div className="flex justify-between">
+                  <div className="flex items-center border border-white bg-[#F1F5E8] px-2 py-1 rounded">
+                    <img className="w-4 h-4" src={download} alt="" />
+                    <h1 className="font-semibold text-sm ml-1 text-[#00D390]">
+                      {item.downloads}
+                    </h1>
+                  </div>
+                  <div className="flex items-center border border-white bg-[#F1F5E8] px-2 py-1 rounded">
+                    <img className="w-4 h-4" src={rating} alt="" />
+                    <h1 className="font-semibold text-sm ml-1 text-[#FF8811]">
+                      {item.ratingAvg}
+                    </h1>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <button
