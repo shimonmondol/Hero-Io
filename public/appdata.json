@@ -1,6 +1,6 @@
 [
   {
-    "image": "../src/images/Chat-Connect.jpg",
+    "image": "https://ibb.co.com/qYkfy58K",
     "title": "Chat Connect",
     "companyName": "TechSoft",
     "id": 1,
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "image": "../src/images/photo.jpg",
+    "image": "https://ibb.co.com/tPmKH380",
     "title": "Photo Studio",
     "companyName": "PixelLab",
     "id": 2,
