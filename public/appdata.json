@@ -1,6 +1,6 @@
 [
   {
-    "image": "/public/images/Chat-Connect.jpg",
+    "image": "../src/images/Chat-Connect.jpg",
     "title": "Chat Connect",
     "companyName": "TechSoft",
     "id": 1,
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "image": "../public/images/photo.jpg",
+    "image": "../src/images/photo.jpg",
     "title": "Photo Studio",
     "companyName": "PixelLab",
     "id": 2,
