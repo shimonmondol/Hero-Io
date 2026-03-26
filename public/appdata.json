@@ -38,7 +38,7 @@
     ]
   },
   {
-    "image": "../public/images/music.jpg",
+    "image": "/images/music.jpg",
     "title": "Music Beats",
     "companyName": "SoundWave",
     "id": 3,
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "image": "../public/images/book.jpg",
+    "image": "/images/book.jpg",
     "title": "Book House",
     "companyName": "GetKnowledge",
     "id": 4,
