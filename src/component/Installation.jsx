@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import download from "../assets/icon-downloads.png";
+import rating from "../assets/icon-ratings.png";
 
 const Installation = () => {
   const [installedApps, setInstalledApps] = useState([]);
@@ -84,7 +86,7 @@ const Installation = () => {
                         <div className="flex">
                           <img
                             className="w-4 h-4 mt-1"
-                            src="/src/assets/icon-downloads.png"
+                            src={download}
                             alt=""
                           />
                           <p className="text-gray-500 ml-2">{app.downloads}</p>
@@ -92,7 +94,7 @@ const Installation = () => {
                         <div className="flex">
                           <img
                             className="w-4 h-4 mt-1"
-                            src="/src/assets/icon-ratings.png"
+                            src={rating}
                             alt=""
                           />
                           <p className="text-gray-500 ml-2">{app.ratingAvg}</p>
