@@ -97,7 +97,6 @@ const Apps = () => {
                     <h5 className="mt-4 mb-2 text-base md:text-lg font-semibold">
                       {item.title}
                     </h5>
-
                     <div className="flex justify-between">
                       <div className="flex items-center bg-[#F1F5E8] px-2 py-1 rounded">
                         <img className="w-4 h-4" src={download} alt="" />
@@ -105,7 +104,6 @@ const Apps = () => {
                           {item.downloads}
                         </h1>
                       </div>
-
                       <div className="flex items-center bg-[#F1F5E8] px-2 py-1 rounded">
                         <img className="w-4 h-4" src={rating} alt="" />
                         <h1 className="font-semibold text-sm ml-1 text-[#FF8811]">

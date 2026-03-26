@@ -1,30 +1,32 @@
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 import download from "../assets/icon-downloads.png";
 import rating from "../assets/icon-ratings.png";
 import review from "../assets/icon-review.png";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ReferenceLine,
-} from "recharts";
+import { toast, ToastContainer } from "react-toastify";
+import { useState } from "react";
 
 const AppDetail = () => {
   const location = useLocation();
   const { item } = location.state;
+  const [loading, setLoading] = useState(false);
 
-  const data = [
-    { name: "Jan", value: 30 },
-    { name: "Feb", value: 50 },
-    { name: "Mar", value: 40 },
-    { name: "Apr", value: 70 },
-  ];
+  const handleInstall = () => {
+    setLoading(true);
+  };
+
+  const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+
+  if (!installedApps.find((app) => app.id === item.id)) {
+    installedApps.push(item);
+    localStorage.setItem("installedApps", JSON.stringify(installedApps));
+    toast.success(`${item.title} Installed Successfully`);
+  } else {
+    toast.info(`${item.title} is already installed`);
+  }
 
   return (
     <div className="bg-[#F5F5F5] pb-20">
+      <ToastContainer position="top-center" />
       <div className="flex flex-col lg:flex-row max-w-6xl mx-auto px-4 lg:pl-6 pt-10 lg:pt-16">
         <div className="flex justify-center lg:block">
           <img
@@ -62,25 +64,18 @@ const AppDetail = () => {
               <h1 className="font-bold text-lg lg:text-2xl">{item.reviews}</h1>
             </div>
           </div>
-          <button className="btn bg-green-600 text-white mt-6 w-full lg:w-auto">
-            Install Now ({item.mb} MB)
+          <button
+            onClick={handleInstall}
+            disabled={loading}
+            className={`btn mt-6 w-full lg:w-auto cursor-pointer ${
+              loading
+                ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+                : "bg-green-600 text-white"
+            }`}
+          >
+            {loading ? "Installed" : `Install Now (${item.mb} MB)`}
           </button>
         </div>
-      </div>
-      <div className="max-w-6xl mx-auto pl-6 pt-16">
-        <LineChart width={500} height={300} data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Line type="monotone" dataKey="value" stroke="#8884d8" />
-          <ReferenceLine
-            y={50}
-            stroke="red"
-            strokeDasharray="5 5"
-            label="Target"
-          />
-        </LineChart>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-6 pt-8 sm:pt-10 lg:pt-16">
         <h1 className="font-semibold text-lg sm:text-lg md:text-xl">
