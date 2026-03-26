@@ -82,12 +82,7 @@ const Apps = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
               {filteredData.map((item) => (
-                <Link
-                  key={item.id}
-                  to={`/apps/${item.id}`}
-                  state={{ item }}
-                  className="w-full"
-                >
+                <Link to={`/apps/${item.id}`} state={{ item }}>
                   <div className="bg-white p-4 border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition w-full">
                     <img
                       className="rounded-xl w-full h-40 md:h-48 object-cover"

@@ -3,26 +3,35 @@ import download from "../assets/icon-downloads.png";
 import rating from "../assets/icon-ratings.png";
 import review from "../assets/icon-review.png";
 import { toast, ToastContainer } from "react-toastify";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AppDetail = () => {
   const location = useLocation();
   const { item } = location.state;
-  const [loading, setLoading] = useState(false);
+  const [installed, setInstalled] = useState(false);
 
-  const handleInstall = () => {
-    setLoading(true);
+  const getInstalledApps = () => {
+    return JSON.parse(localStorage.getItem("installedApps")) || [];
   };
 
-  const installedApps = JSON.parse(localStorage.getItem("installedApps")) || [];
+  useEffect(() => {
+    const exists = getInstalledApps().some((app) => app.id === item.id);
+    setInstalled(exists);
+  }, [item.id]);
 
-  if (!installedApps.find((app) => app.id === item.id)) {
-    installedApps.push(item);
-    localStorage.setItem("installedApps", JSON.stringify(installedApps));
+  const handleInstall = () => {
+    const installedApps = getInstalledApps();
+    if (installedApps.some((app) => app.id === item.id)) {
+      toast.info(`${item.title} is already installed`);
+      return;
+    }
+    localStorage.setItem(
+      "installedApps",
+      JSON.stringify([...installedApps, item]),
+    );
     toast.success(`${item.title} Installed Successfully`);
-  } else {
-    toast.info(`${item.title} is already installed`);
-  }
+    setInstalled(true);
+  };
 
   return (
     <div className="bg-[#F5F5F5] pb-20">
@@ -66,14 +75,14 @@ const AppDetail = () => {
           </div>
           <button
             onClick={handleInstall}
-            disabled={loading}
-            className={`btn mt-6 w-full lg:w-auto cursor-pointer ${
-              loading
-                ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+            disabled={installed}
+            className={`btn mt-6 w-full lg:w-auto ${
+              installed
+                ? "bg-gray-400 text-gray-700 cursor-not-allowed"
                 : "bg-green-600 text-white"
             }`}
           >
-            {loading ? "Installed" : `Install Now (${item.mb} MB)`}
+            {installed ? "Installed" : `Install Now (${item.mb} MB)`}
           </button>
         </div>
       </div>
