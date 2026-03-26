@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://ibb.co.com/qYkfy58K",
+    "image": "/images/chat.jpg",
     "title": "Chat Connect",
     "companyName": "TechSoft",
     "id": 1,
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "image": "https://ibb.co.com/tPmKH380",
+    "image": "/images/photo.jpg",
     "title": "Photo Studio",
     "companyName": "PixelLab",
     "id": 2,
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "image": "../public/images/food-delivery.jpg",
+    "image": "/images/food-delivery.jpg",
     "title": "Food Delivery",
     "companyName": "QuickBite",
     "id": 5,
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "image": "../public/images/weather.jpg",
+    "image": "/images/weather.jpg",
     "title": "Weather Now",
     "companyName": "SkyNet",
     "id": 6,
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "image": "../public/images/news.jpg",
+    "image": "/images/news.jpg",
     "title": "News Hub",
     "companyName": "GlobalMedia",
     "id": 7,
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "image": "../public/images/game.jpg",
+    "image": "/images/game.jpg",
     "title": "Gameplay Zone",
     "companyName": "FunPlay",
     "id": 8,
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "image": "../public/images/english.jpg",
+    "image": "/images/english.jpg",
     "title": "Learn English",
     "companyName": "EduTech",
     "id": 9,
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "image": "../public/images/travel.jpg",
+    "image": "/images/travel.jpg",
     "title": "Travel Guide",
     "companyName": "ExploreWorld",
     "id": 10,
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "image": "../public/images/note.jpg",
+    "image": "/images/note.jpg",
     "title": "Note Keeper",
     "companyName": "SimpleApps",
     "id": 11,
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "image": "../public/images/calculator.jpg",
+    "image": "/images/calculator.jpg",
     "title": "Calculator Plus",
     "companyName": "MathWorks",
     "id": 12,
@@ -228,7 +228,7 @@
     ]
   },
   {
-    "image": "../public/images/video.jpg",
+    "image": "/images/video.jpg",
     "title": "Playbox Player",
     "companyName": "MediaPro",
     "id": 13,
@@ -247,7 +247,7 @@
     ]
   },
   {
-    "image": "../public/images/shop-easy.jpg",
+    "image": "/images/shop-easy.jpg",
     "title": "Easy Shop",
     "companyName": "BuyNow",
     "id": 14,
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "image": "../public/images/vpn.jpg",
+    "image": "/images/vpn.jpg",
     "title": "VPN Secure",
     "companyName": "SafeNet",
     "id": 15,
@@ -285,7 +285,7 @@
     ]
   },
   {
-    "image": "../public/images/language.jpg",
+    "image": "/images/language.jpg",
     "title": "Language Translator",
     "companyName": "LinguaTech",
     "id": 16,
@@ -304,7 +304,7 @@
     ]
   },
   {
-    "image": "../public/images/expense.jpg",
+    "image": "/images/expense.jpg",
     "title": "Expense Tracker",
     "companyName": "FinancePro",
     "id": 17,
@@ -323,7 +323,7 @@
     ]
   },
   {
-    "image": "../public/images/qr.jpg",
+    "image": "/images/qr.jpg",
     "title": "QR Scanner",
     "companyName": "ScanTech",
     "id": 18,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "../public/images/alarm.jpg",
+    "image": "/images/alarm.jpg",
     "title": "Alarm Clock Pro",
     "companyName": "TimeMaster",
     "id": 19,
@@ -361,7 +361,7 @@
     ]
   },
   {
-    "image": "../public/images/scanner.jpg",
+    "image": "/images/scanner.jpg",
     "title": "Document Scanner",
     "companyName": "DocuScan",
     "id": 20,

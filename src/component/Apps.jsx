@@ -5,6 +5,7 @@ import AppError from "../assets/App-Error.png";
 import { Link, useNavigate } from "react-router";
 import { FaSearch } from "react-icons/fa";
 
+
 const Apps = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
