@@ -67,18 +67,20 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto text-center pt-10 px-4">
-        <h1 className="text-2xl md:text-3xl font-bold">Trending Apps</h1>
-        <p className="text-gray-500 mt-3 text-sm md:text-base">
-          Explore All Trending Apps on the Market developed by us
-        </p>
+      <div className="max-w-6xl mx-auto pt-10 px-4">
+        <div className="text-center">
+          <h1 className="text-2xl md:text-3xl font-bold">Trending Apps</h1>
+          <p className="text-gray-500 mt-3 text-sm md:text-base">
+            Explore All Trending Apps on the Market developed by us
+          </p>
+        </div>
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-10">
           {firstEightApps.map((item) => (
             <Link
               key={item.id}
               to={`/apps/${item.id}`}
-              state={{ item }} // <-- pass the full item
+              state={{ item }}
               className="w-full"
             >
               <div

@@ -76,7 +76,7 @@ const AppDetail = () => {
           <button
             onClick={handleInstall}
             disabled={installed}
-            className={`btn mt-6 w-full lg:w-auto ${
+            className={`btn mt-6 w-50 lg:w-auto ${
               installed
                 ? "bg-gray-400 text-gray-700 cursor-not-allowed"
                 : "bg-green-600 text-white"
