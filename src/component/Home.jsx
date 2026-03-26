@@ -113,12 +113,14 @@ const Home = () => {
             </Link>
           ))}
         </div>
-        <button
-          onClick={() => navigate("/apps")}
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg mt-10 mb-10 hover:bg-blue-700 transition cursor-pointer"
-        >
-          Show More
-        </button>
+        <div className="flex justify-center items-center">
+          <button
+            onClick={() => navigate("/apps")}
+            className="flex justify-center items-center bg-blue-600 text-white px-6 py-2 rounded-lg mt-10 mb-10 hover:bg-blue-700 transition cursor-pointer"
+          >
+            Show More
+          </button>
+        </div>
       </div>
     </div>
   );
