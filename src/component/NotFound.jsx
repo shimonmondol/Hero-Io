@@ -1,11 +1,12 @@
 import React from "react";
+import error from "../assets/error-404.png"
 
 const NotFound = () => {
   return (
     <div className="bg-[#F5F5F5] py-10 min-h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center text-center">
         <img
-          src="https://i.ibb.co/QFj91zZj/error-404.png"
+          src={error}
           alt="404 Error"
           className="w-80"
         />
